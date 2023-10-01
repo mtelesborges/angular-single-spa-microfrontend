@@ -3,12 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:single-spa:sidebar": "ng build sidebar --configuration production",
-    "serve:single-spa:sidebar": "ng s --project sidebar --disable-host-check --port 4201 --live-reload false"
+    "build": "ng build sidebar --configuration production",
+    "start": "ng s --project sidebar --disable-host-check --port 4201 --live-reload false"
   },
   "private": true,
   "dependencies": {
