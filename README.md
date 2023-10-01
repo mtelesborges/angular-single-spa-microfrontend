@@ -7,6 +7,7 @@
 - [Folder structure](#folder-structure)
 - [Creating the application](#creating-the-application)
     - [Root](#root)
+    - [Sidebar](#sidebar)
 
 ## Folder structure
 ```
@@ -24,3 +25,11 @@
 npm init single-spa
 ```
 <img src="assets/creating-root-application.png" alt="Creating root application"/>
+
+### Sidebar
+
+> Run this command in the terminal and answer the configuration questions shown
+```shell
+ng new sidebar
+```
+<img src="assets/creating-sidebar-application.png" alt="Creating sidebar application"/>
