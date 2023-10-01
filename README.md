@@ -33,3 +33,12 @@ npm init single-spa
 ng new sidebar
 ```
 <img src="assets/creating-sidebar-application.png" alt="Creating sidebar application"/>
+
+<br />
+<br />
+
+> Run this command to add the single spa in the sidebar application inside the sidebar folder
+```shell
+ng add single-spa-angular
+```
+<img src="assets/adding-single-spa-sidebar.png" alt="Adding sinle spa to sidebar application"/>
