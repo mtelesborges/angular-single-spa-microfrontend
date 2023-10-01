@@ -4,13 +4,22 @@
 
 ## Table of contents
 
+- [How to execute](#how-to-execute)
 - [Folder structure](#folder-structure)
-- [Creating the application](#creating-the-application)
+- [How to reproduce application development](#how-to-reproduce-application-development)
     - [Root](#root)
     - [Sidebar](#sidebar)
     - [Sample app 1](#sample-app-1)
     - [Sample app 2](#sample-app-2)
 
+## How to use
+
+> For running the application, in different terminals, run the above command within all project folder: root, sidebar, sample-app1 and sample-app2
+```shell
+yarn start
+```
+
+> So, open this url in the browser [http://localhost:9000](http://localhost:9000)
 ## Folder structure
 ```
 |- root
@@ -24,7 +33,7 @@
 - sample-app2: contains the sample app 2 application
 - sidebar: contains the sidebar application
 
-## Creating the application
+## How to reproduce application development
 
 ### Root
 
@@ -38,7 +47,7 @@ npm init single-spa
 
 > Run this command in the terminal and answer the configuration questions shown
 ```shell
-ng new sidebar
+ng new sidebar --prefix sidebar
 ```
 <img src="assets/creating-sidebar-application.png" alt="Creating sidebar application"/>
 
@@ -53,7 +62,7 @@ ng add single-spa-angular
 ### Sample app 1
 > Run this command in the terminal and answer the configuration questions shown
 ```shell
-ng new sample-app1
+ng new sample-app1 --prefix sample-app1
 ```
 <img src="assets/creating-sample-app1-application.png" alt="Creating sample app 1 application"/>
 
@@ -68,7 +77,7 @@ ng add single-spa-angular
 ### Sample app 2
 > Run this command in the terminal and answer the configuration questions shown
 ```shell
-ng new sample-app2
+ng new sample-app2 --prefix sample-app2
 ```
 <img src="assets/creating-sample-app2-application.png" alt="Creating sample app 2 application"/>
 
@@ -79,3 +88,40 @@ ng new sample-app2
 ng add single-spa-angular
 ```
 <img src="assets/adding-single-spa-sample-app2.png" alt="Adding sinle spa to sample app 2 application"/>
+
+## Configurations
+
+> In each project (sidebar, sample-app1 and sample-app2) update the AppRoutingModule adding APP_BASE_HREF
+
+```typescript
+providers: [
+  { provide: APP_BASE_HREF, useValue: '/' },
+]
+```
+
+> In each project (sidebar, sample-app1 and sample-app2) add EmptyComponent configuration for 404 routes
+
+```typescript
+// Update AppModule
+@NgModule({
+  declarations: [
+    EmptyRouteComponent,
+    // ...
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+```typescript
+// Update AppRoutingModule
+const routes: Routes = [
+  { path: '**', component: EmptyRouteComponent },
+  // ...
+];
+```
