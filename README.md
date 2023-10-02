@@ -1,6 +1,26 @@
-# Angular + Single Spa
+<p align="center">
+  <img src="assets/angular-logo.png" alt="Python" style="height: 256px"/>
+  <img src="assets/single-spa-mark-magenta.svg" alt="Python" style="height: 256px"/>
+</p>
 
-> This project contains a basic structure for microfontends using single spa and angular
+<h1 align="center">Microfrontend project sample</h1>
+
+<p>As it is an example project, I reserved the right to place root, sample-app1, sample-app2 and navbar in a single repository, however, in a real situation, each project would be in its proper repository.</p>
+
+<p>Although the use of microfrontends is in vogue, it is necessary to take into account the challenges arising from this architecture. Remember that some difficulties will arise:</p>
+
+- Updating libraries in different projects
+- Development and maintenance of components, services, among others that are normally allocated in a shared directory in a library hosted in a private repository
+- If it is difficult to maintain standards in a single project, it is much worse in several.
+- A limitation of this architecture at the moment is communication between projects. The only way to do this is to create custom events via javascript, subscribe to them and execute them.
+
+<p>The limitations above make me believe that in most scenarios, the microfrontend architecture should not be adopted, giving preference to the monolithic or monorepo structure.</p>
+
+<p>An argument used to defend microfrontends is the isolation of squads and the reduction of the risk of a failure in deployment or in a specific development affecting the entire system. But the question remains: is this a failure of the other architectures, or is it a failure of your process that does not have adequate governance and test coverage?</p>
+
+> Although it is possible to create projects in different frameworks, I wouldn't do this. Again, if it's difficult to maintain standards in a single project with a single framework, imagine having several.
+
+> 
 
 ## Table of contents
 
@@ -11,6 +31,9 @@
     - [Sidebar](#sidebar)
     - [Sample app 1](#sample-app-1)
     - [Sample app 2](#sample-app-2)
+    - [Configurations](#configurations)
+- [Todo](#todo)
+- [Contributes](#contributes)
 
 ## How to use
 
@@ -125,3 +148,15 @@ const routes: Routes = [
   // ...
 ];
 ```
+
+## TODO
+
+- [ ] Develop a template for creating new projects
+- [ ] Add husky
+- [ ] Add prettier
+- [ ] Add eslint
+- [ ] Add a conceptual section explaining how the single spa works
+- [ ] Create a sample of private package
+
+## Contributes
+If you disagree with any information or think something could be improved, feel free to open an issue and suggest improvements.
