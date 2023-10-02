@@ -3,7 +3,7 @@
   <img src="assets/single-spa-mark-magenta.svg" alt="Python" style="height: 256px"/>
 </p>
 
-<h1>Microfrontend project sample with <a href="https://angular.io/">Angular</a> and <a href="https://single-spa.js.org/docs/ecosystem-angular">Single Spa</a></h1>
+<h1 align="center">Microfrontend project sample</h1>
 
 <p>As it is an example project, I reserved the right to place root, sample-app1, sample-app2 and navbar in a single repository, however, in a real situation, each project would be in its proper repository.</p>
 
