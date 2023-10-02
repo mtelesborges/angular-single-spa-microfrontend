@@ -156,6 +156,7 @@ const routes: Routes = [
 - [ ] Add prettier
 - [ ] Add eslint
 - [ ] Add a conceptual section explaining how the single spa works
+- [ ] Create a sample of private package
 
 ## Contributes
 If you disagree with any information or think something could be improved, feel free to open an issue and suggest improvements.
